@@ -1,6 +1,8 @@
 package com.vgs.vgsrecruitment.payload;
 
+import com.vgs.vgsrecruitment.model.UserEntity;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,6 +12,7 @@ import javax.validation.constraints.NotBlank;
 
 @Getter
 @Setter
+@AllArgsConstructor
 public class UserRequest {
 
     @NotBlank(message = "First Name cannot be empty")
@@ -25,7 +28,6 @@ public class UserRequest {
     @ApiModelProperty(notes = "User's Email")
     private String email;
 
-    @NotBlank(message = "Birth day cannot be empty")
     @ApiModelProperty(notes = "User's Birth day")
     private int day;
 
