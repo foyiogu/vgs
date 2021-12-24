@@ -36,7 +36,7 @@ class UserServiceImplTest {
     @Test
     void testSaveUser() {
         // Setup
-        final UserRequest userRequest = new UserRequest("Francis", "Oyiogu", "foyiogu@gmail.com", 25, "December", 2020);
+        final UserRequest userRequest = new UserRequest("Francis", "Oyiogu", "foyiogu@gmail.com", LocalDate.of(2020, 12, 25));
         final BirthdayResponse expectedResult = new BirthdayResponse("Francis Oyiogu added successfully");
         when(mockUserRepository.existsByEmail("foyiogu@gmail.com")).thenReturn(false);
 
@@ -55,7 +55,7 @@ class UserServiceImplTest {
     @Test
     void testUpdateUser() {
         // Setup
-        final UserRequest newUserRequest = new UserRequest("Francis", "Oyu", "foyiogu@yahoo.com", 26, "December", 2020);
+        final UserRequest newUserRequest = new UserRequest("Francis", "Oyu", "foyiogu@yahoo.com", LocalDate.of(2020, 12, 26));
         final BirthdayResponse expectedResult = new BirthdayResponse("Francis Oyu updated successfully");
 
         // Configure UserRepository.findById(...).
@@ -80,7 +80,7 @@ class UserServiceImplTest {
     @Test
     void testUpdateUser_UserRepositoryFindByIdReturnsAbsent() {
 
-        final UserRequest newUserRequest = new UserRequest("Francis", "Oyu", "foyiogu@yahoo.com", 26, "December", 2020);
+        final UserRequest newUserRequest = new UserRequest("Francis", "Oyu", "foyiogu@yahoo.com", LocalDate.of(2020, 12, 26));
 
         assertThatIllegalArgumentException().isThrownBy(()-> {
                     when(mockUserRepository.findById(1L)).thenReturn(Optional.empty());
@@ -92,7 +92,7 @@ class UserServiceImplTest {
     @Test
     void testHelloBirthday() {
         // Setup
-        final BirthdayResponse expectedResult = new BirthdayResponse("Hello, A B! Your birthday was " + 19 + " days ago");
+        final BirthdayResponse expectedResult = new BirthdayResponse("Hello, A B! Your birthday was " + 1 + " days ago");
 
         // Configure UserRepository.findByEmail(...).
         final Optional<UserEntity> userEntity = Optional.of(new UserEntity(1L, "foyiogu@yahoo.com", "A", "B", LocalDate.of(2020, Month.DECEMBER, 25)));

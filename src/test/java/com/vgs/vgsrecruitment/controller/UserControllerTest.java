@@ -8,14 +8,12 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
+import java.time.LocalDate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
@@ -39,7 +37,7 @@ class UserControllerTest {
     void testUpdate() throws Exception {
         // Setup
 
-        final UserRequest userRequest = new UserRequest("Francis", "Oyiogu", "foyiogu@gmail.com", 25, "December", 2020);
+        final UserRequest userRequest = new UserRequest("Francis", "Oyiogu", "foyiogu@gmail.com", LocalDate.of(1994, 12, 25));
 
         when(mockUserService.updateUser(eq(1L), any(UserRequest.class))).thenReturn(new BirthdayResponse("  string updated successfully"));
 
@@ -50,7 +48,6 @@ class UserControllerTest {
                 .andReturn().getResponse();
 
         // Verify the results
-//        assertThat(response.getStatus()).isEqualTo(HttpStatus.OK.value());
         assertThat(response.getContentAsString()).isNotEqualTo(mockUserService.updateUser(1L, userRequest));
     }
 
@@ -68,7 +65,6 @@ class UserControllerTest {
 
 
         // Verify the results
-//        assertThat(response.getStatus()).isEqualTo(HttpStatus.OK.value());
         assertThat(response.getContentAsString().split("\"")[3]).isEqualTo(mockUserService.helloBirthday(email).getMessage());
     }
 }

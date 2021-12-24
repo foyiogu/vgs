@@ -10,7 +10,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.time.Month;
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -34,9 +33,8 @@ public class UserServiceImpl implements UserService {
             throw new BadRequestException("Error: Email is already taken!");
         }
 
-        LocalDate birthDate = LocalDate.of(userRequest.getYear(),  Month.valueOf(userRequest.getMonth().toUpperCase()), userRequest.getDay());
 
-        UserEntity userEntity = new UserEntity(userRequest.getEmail(), userRequest.getFirstName(), userRequest.getLastName(), birthDate);
+        UserEntity userEntity = new UserEntity(userRequest.getEmail(), userRequest.getFirstName(), userRequest.getLastName(), userRequest.getBirthDate());
 
         userRepository.save(userEntity);
 
@@ -56,7 +54,7 @@ public class UserServiceImpl implements UserService {
                 });
 
         newUserEntity.setFirstName(newUserRequest.getFirstName());
-        newUserEntity.setFirstName(newUserRequest.getLastName());
+        newUserEntity.setLastName(newUserRequest.getLastName());
 
         if(existsByMail(newUserRequest.getEmail())){
             throw new BadRequestException("Error: Email is already taken!");
@@ -64,8 +62,7 @@ public class UserServiceImpl implements UserService {
             newUserEntity.setEmail(newUserRequest.getEmail());
         }
 
-        LocalDate newBirthDate = LocalDate.of(newUserRequest.getYear(),  Month.valueOf(newUserRequest.getMonth().toUpperCase()), newUserRequest.getDay());
-        newUserEntity.setBirthDate(newBirthDate);
+        newUserEntity.setBirthDate(newUserRequest.getBirthDate());
 
         userRepository.save(newUserEntity);
 
@@ -98,7 +95,7 @@ public class UserServiceImpl implements UserService {
         return birthdayResponse;
     }
 
-    private boolean isValidEmail(String email) {
+    public boolean isValidEmail(String email) {
         String regex = "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$";
 
         // Compile the ReGex
@@ -109,7 +106,7 @@ public class UserServiceImpl implements UserService {
         Matcher m = p.matcher(email);
         return m.matches();
     }
-    private boolean existsByMail(String email) {
+    public boolean existsByMail(String email) {
         return userRepository.existsByEmail(email);
     }
 }

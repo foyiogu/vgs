@@ -1,13 +1,16 @@
 package com.vgs.vgsrecruitment.payload;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.vgs.vgsrecruitment.model.UserEntity;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import java.time.LocalDate;
 
 
 @Getter
@@ -28,16 +31,9 @@ public class UserRequest {
     @ApiModelProperty(notes = "User's Email")
     private String email;
 
-    @ApiModelProperty(notes = "User's Birth day")
-    private int day;
-
-    @NotBlank(message = "Birth month cannot be empty")
-    @ApiModelProperty(notes = "User's Birth month")
-    private String month;
-
-    @NotBlank(message = "Birth year cannot be empty")
-    @ApiModelProperty(notes = "User's Birth year")
-    private int year;
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+    private LocalDate birthDate;
 
 
 }

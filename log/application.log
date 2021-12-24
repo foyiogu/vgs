@@ -1,0 +1,58 @@
+2021-12-24 01:08:27.723  INFO 9666 --- [main] c.v.v.VgsRecruitmentApplicationTests     : Starting VgsRecruitmentApplicationTests using Java 11.0.10 on Franciss-Air.local with PID 9666 (started by user in /Users/user/Downloads/vgs-recruitment)
+2021-12-24 01:08:27.738  INFO 9666 --- [main] c.v.v.VgsRecruitmentApplicationTests     : No active profile set, falling back to default profiles: default
+2021-12-24 01:08:30.646  INFO 9666 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-24 01:08:30.798  INFO 9666 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 1 JPA repository interfaces.
+2021-12-24 01:08:33.967  INFO 9666 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-24 01:08:34.254  INFO 9666 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-12-24 01:08:34.398  INFO 9666 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-24 01:08:34.971  INFO 9666 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-24 01:08:35.410  INFO 9666 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-24 01:08:35.520  INFO 9666 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-12-24 01:08:37.922  INFO 9666 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-24 01:08:37.950  INFO 9666 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-24 01:08:38.735  WARN 9666 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-24 01:08:40.946  INFO 9666 --- [main] c.v.v.VgsRecruitmentApplicationTests     : Started VgsRecruitmentApplicationTests in 14.065 seconds (JVM running for 18.552)
+2021-12-24 01:08:41.739  INFO 9666 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-24 01:08:41.748  INFO 9666 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-12-24 01:08:41.758  INFO 9666 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-12-24 01:10:35.625  INFO 10962 --- [main] c.v.v.controller.UserControllerTest      : Starting UserControllerTest using Java 11.0.10 on Franciss-Air.local with PID 10962 (started by user in /Users/user/Downloads/vgs-recruitment)
+2021-12-24 01:10:35.631  INFO 10962 --- [main] c.v.v.controller.UserControllerTest      : No active profile set, falling back to default profiles: default
+2021-12-24 01:10:41.623  INFO 10962 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-12-24 01:10:41.623  INFO 10962 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-12-24 01:10:41.626  INFO 10962 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-12-24 01:10:42.031  INFO 10962 --- [main] c.v.v.controller.UserControllerTest      : Started UserControllerTest in 7.322 seconds (JVM running for 10.783)
+2021-12-24 01:10:42.791  WARN 10962 --- [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized token 'content': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false'); nested exception is com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'content': was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')<LF> at [Source: (PushbackInputStream); line: 1, column: 8]]
+2021-12-24 01:18:44.545  INFO 15990 --- [main] c.v.v.VgsRecruitmentApplicationTests     : Starting VgsRecruitmentApplicationTests using Java 11.0.10 on Franciss-Air.local with PID 15990 (started by user in /Users/user/Downloads/vgs-recruitment)
+2021-12-24 01:18:44.551  INFO 15990 --- [main] c.v.v.VgsRecruitmentApplicationTests     : No active profile set, falling back to default profiles: default
+2021-12-24 01:18:48.099  INFO 15990 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-24 01:18:48.254  INFO 15990 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 1 JPA repository interfaces.
+2021-12-24 01:18:50.678  INFO 15990 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-24 01:18:50.846  INFO 15990 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-12-24 01:18:50.965  INFO 15990 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-24 01:18:51.233  INFO 15990 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-24 01:18:51.526  INFO 15990 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-24 01:18:51.584  INFO 15990 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-12-24 01:18:52.824  INFO 15990 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-24 01:18:52.853  INFO 15990 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-24 01:18:53.552  WARN 15990 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-24 01:18:55.498  INFO 15990 --- [main] c.v.v.VgsRecruitmentApplicationTests     : Started VgsRecruitmentApplicationTests in 11.75 seconds (JVM running for 15.87)
+2021-12-24 01:18:55.849  INFO 15990 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-24 01:18:55.853  INFO 15990 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-12-24 01:18:55.868  INFO 15990 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-12-24 01:19:29.311  INFO 16440 --- [main] c.v.v.VgsRecruitmentApplicationTests     : Starting VgsRecruitmentApplicationTests using Java 11.0.10 on Franciss-Air.local with PID 16440 (started by user in /Users/user/Downloads/vgs-recruitment)
+2021-12-24 01:19:29.314  INFO 16440 --- [main] c.v.v.VgsRecruitmentApplicationTests     : No active profile set, falling back to default profiles: default
+2021-12-24 01:19:31.962  INFO 16440 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-24 01:19:32.098  INFO 16440 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 1 JPA repository interfaces.
+2021-12-24 01:19:34.787  INFO 16440 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-24 01:19:34.962  INFO 16440 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-12-24 01:19:35.073  INFO 16440 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-24 01:19:35.378  INFO 16440 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-24 01:19:35.650  INFO 16440 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-24 01:19:35.706  INFO 16440 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-12-24 01:19:37.110  INFO 16440 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-24 01:19:37.136  INFO 16440 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-24 01:19:38.163  WARN 16440 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-24 01:19:41.423  INFO 16440 --- [main] c.v.v.VgsRecruitmentApplicationTests     : Started VgsRecruitmentApplicationTests in 12.876 seconds (JVM running for 16.587)
+2021-12-24 01:19:41.727  INFO 16440 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-24 01:19:41.733  INFO 16440 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-12-24 01:19:41.743  INFO 16440 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
